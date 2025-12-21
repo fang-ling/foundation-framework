@@ -30,4 +30,22 @@ typedef long long Foundation_Int64;
  */
 typedef unsigned long long Foundation_UInt64;
 
+/* MARK: - Common Arithmetic Operations */
+
+/**
+ * Returns the absolute value of the given number.
+ *
+ * The absolute value of x must be representable in the same type. In
+ * particular, the absolute value of a signed, fixed-width integer type’s
+ * minimum cannot be represented.
+ *
+ *     Foundation_Int64 x = Foundation_Int64_MakeAbsolute(-(1LL << 63));
+ *     // Results in undefined behavior
+ *
+ * - Parameter x: A signed number.
+ *
+ * - Returns: The absolute value of x.
+ */
+Foundation_Int64 Foundation_Int64_MakeAbsolute(Foundation_Int64 x);
+
 #endif /* int64_h */
