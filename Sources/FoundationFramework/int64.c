@@ -18,3 +18,7 @@
 //
 
 #include "int64.h"
+
+Foundation_Int64 Foundation_Int64_MakeAbsolute(Foundation_Int64 x) {
+  return x < 0 ? -x : x;
+}
