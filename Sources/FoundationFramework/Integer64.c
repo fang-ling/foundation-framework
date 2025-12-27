@@ -1,5 +1,5 @@
 //
-//  int64.c
+//  Integer64.c
 //  foundation-framework
 //
 //  Created by Fang Ling on 2025/12/7.
@@ -17,8 +17,8 @@
 //  limitations under the License.
 //
 
-#include "int64.h"
+#include "Integer64.h"
 
-Foundation_Int64 Foundation_Int64_MakeAbsolute(Foundation_Int64 x) {
+Foundation_Integer64 Foundation_Integer64_MakeAbsolute(Foundation_Integer64 x) {
   return x < 0 ? -x : x;
 }

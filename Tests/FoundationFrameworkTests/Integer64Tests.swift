@@ -1,5 +1,5 @@
 //
-//  FoundationFrameworkTests.swift
+//  Integer64Tests.swift
 //  foundation-framework
 //
 //  Created by Fang Ling on 2025/12/7.
@@ -20,7 +20,17 @@
 import Testing
 @testable import FoundationFramework
 
-@Test func example() async throws {
-  // Write your test here and use APIs like `#expect(...)` to check expected
-  // conditions.
+@Suite("Integer64Tests")
+struct Integer64Tests {
+  @Test func testPositive() {
+    #expect(Foundation_Integer64_MakeAbsolute(19358) == 19358)
+  }
+
+  @Test func testZero() {
+    #expect(Foundation_Integer64_MakeAbsolute(0) == 0)
+  }
+
+  @Test func testNegative() {
+    #expect(Foundation_Integer64_MakeAbsolute(-12333) == 12333)
+  }
 }

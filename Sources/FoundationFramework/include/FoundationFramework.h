@@ -20,6 +20,6 @@
 #ifndef FoundationFramework_h
 #define FoundationFramework_h
 
-#include "../int64.h"
+#include "../Integer64.h"
 
 #endif /* FoundationFramework_h */

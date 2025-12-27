@@ -1,5 +1,5 @@
 //
-//  int64.h
+//  Integer64.h
 //  foundation-framework
 //
 //  Created by Fang Ling on 2025/12/7.
@@ -17,18 +17,18 @@
 //  limitations under the License.
 //
 
-#ifndef int64_h
-#define int64_h
+#ifndef Integer64_h
+#define Integer64_h
 
 /**
  * A 64-bit signed integer value type.
  */
-typedef long long Foundation_Int64;
+typedef long long Foundation_Integer64;
 
 /**
  * A 64-bit unsigned integer value type.
  */
-typedef unsigned long long Foundation_UInt64;
+typedef unsigned long long Foundation_UnsignedInteger64;
 
 /* MARK: - Common Arithmetic Operations */
 
@@ -46,6 +46,6 @@ typedef unsigned long long Foundation_UInt64;
  *
  * - Returns: The absolute value of x.
  */
-Foundation_Int64 Foundation_Int64_MakeAbsolute(Foundation_Int64 x);
+Foundation_Integer64 Foundation_Integer64_MakeAbsolute(Foundation_Integer64 x);
 
-#endif /* int64_h */
+#endif /* Integer64_h */
