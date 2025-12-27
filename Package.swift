@@ -26,11 +26,17 @@ let package = Package(
   products: [
     .library(name: "FoundationFramework", targets: ["FoundationFramework"])
   ],
+  dependencies: [
+    .package(url: "https://github.com/apple/swift-numerics", from: "1.0.0")
+  ],
   targets: [
     .target(name: "FoundationFramework"),
     .testTarget(
       name: "FoundationFrameworkTests",
-      dependencies: ["FoundationFramework"]
+      dependencies: [
+        "FoundationFramework",
+        .product(name: "Numerics", package: "swift-numerics")
+      ]
     )
   ],
   cLanguageStandard: .c89

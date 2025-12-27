@@ -1,8 +1,8 @@
 //
-//  Integer64Tests.swift
+//  FloatingPoint64.c
 //  foundation-framework
 //
-//  Created by Fang Ling on 2025/12/7.
+//  Created by Fang Ling on 2025/12/27.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -17,20 +17,11 @@
 //  limitations under the License.
 //
 
-@testable import FoundationFramework
-import Testing
+#include "FloatingPoint64.h"
 
-@Suite("Integer64Tests")
-struct Integer64Tests {
-  @Test func testPositive() {
-    #expect(Foundation_Integer64_MakeAbsolute(19358) == 19358)
-  }
+#include <math.h>
 
-  @Test func testZero() {
-    #expect(Foundation_Integer64_MakeAbsolute(0) == 0)
-  }
-
-  @Test func testNegative() {
-    #expect(Foundation_Integer64_MakeAbsolute(-12333) == 12333)
-  }
+Foundation_FloatingPoint64
+Foundation_FloatingPoint64_TakeSquareRoot(Foundation_FloatingPoint64 value) {
+  return sqrt(value);
 }
