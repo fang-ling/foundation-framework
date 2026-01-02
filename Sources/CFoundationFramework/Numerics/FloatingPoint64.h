@@ -25,12 +25,12 @@
  */
 typedef double Foundation_FloatingPoint64;
 
-///* MARK: - Numeric Constants */
-//
-///**
-// * The mathematical constant pi (π), approximately equal to 3.14159.
-// */
-//const Foundation_FloatingPoint64 π = 3.14159265358979323846264338327950288;
+/* MARK: - Numeric Constants */
+
+/**
+ * The mathematical constant pi (π), approximately equal to 3.14159.
+ */
+extern const Foundation_FloatingPoint64 Foundation_FloatingPoint64_Pi;
 
 /* MARK: - Common Floating-Point Operations */
 

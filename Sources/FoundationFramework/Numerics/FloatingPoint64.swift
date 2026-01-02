@@ -22,6 +22,13 @@ import CFoundationFramework
 public typealias FloatingPoint64 = Double
 
 extension FloatingPoint64 {
+  /* MARK: - Numeric Constants */
+
+  /// The mathematical constant pi (π), approximately equal to 3.14159.
+  public static var π: Self { Foundation_FloatingPoint64_Pi }
+
+  /* MARK: - Elementary Functions */
+
   /// Returns the cosine of the value.
   ///
   /// The value will be interpreted as an angle measured in radians.

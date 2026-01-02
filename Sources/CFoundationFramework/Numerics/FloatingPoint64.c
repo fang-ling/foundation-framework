@@ -21,6 +21,10 @@
 
 #include <math.h>
 
+/* MARK: - Numeric Constants */
+
+const Foundation_FloatingPoint64 Foundation_FloatingPoint64_Pi = M_PI;
+
 /* MARK: - Common Floating-Point Operations */
 
 Foundation_FloatingPoint64
