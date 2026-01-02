@@ -21,4 +21,16 @@
 import Testing
 
 @Suite("FloatingPoint64Tests")
-struct FloatingPoint64Tests { }
+struct FloatingPoint64Tests {
+  @Test func testEqualityCheck() {
+    #expect(Foundation_FloatingPoint64_CheckEquality(0, 0, 0))
+    #expect(Foundation_FloatingPoint64_CheckEquality(0, 0, 1e-6))
+
+    #expect(!Foundation_FloatingPoint64_CheckEquality(0, 0.1, 0))
+    #expect(!Foundation_FloatingPoint64_CheckEquality(0, 0.1, 1e-6))
+
+    #expect(Foundation_FloatingPoint64_CheckEquality(3.14159, 3.14159, 0))
+    #expect(Foundation_FloatingPoint64_CheckEquality(3.14159, 3.141592, 1e-5))
+    #expect(!Foundation_FloatingPoint64_CheckEquality(3.14159, 3.141592, 1e-6))
+  }
+}

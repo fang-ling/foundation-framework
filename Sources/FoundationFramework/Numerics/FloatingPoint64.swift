@@ -27,6 +27,21 @@ extension FloatingPoint64 {
   /// The mathematical constant pi (π), approximately equal to 3.14159.
   public static var π: Self { Foundation_FloatingPoint64_Pi }
 
+  /* MARK: - Common Floating-Point Operations */
+
+  /// Returns a Boolean value that indicates whether two values are equal within
+  /// a specified tolerance.
+  ///
+  /// - Parameters:
+  ///   - other: The right-hand side value.
+  ///   - tolerance: A double-precision value that specifies the tolerance.
+  ///
+  /// - Returns: A Boolean value that indicates whether two values are equal
+  ///   within a specified tolerance.
+  public func checkEquality(to other: Self, tolerance: Self) -> Boolean {
+    return Foundation_FloatingPoint64_CheckEquality(self, other, tolerance)
+  }
+
   /* MARK: - Elementary Functions */
 
   /// Returns the cosine of the value.

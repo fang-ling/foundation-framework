@@ -20,6 +20,8 @@
 #ifndef FloatingPoint64_h
 #define FloatingPoint64_h
 
+#include "Boolean.h"
+
 /**
  * A double-precision, floating-point value type.
  */
@@ -63,23 +65,23 @@ Foundation_FloatingPoint64_TakeSquareRoot(Foundation_FloatingPoint64 value);
 //Foundation_FloatingPoint64
 //Foundation_FloatingPoint64_FindMaximum(Foundation_FloatingPoint64 x,
 //                                       Foundation_FloatingPoint64 y);
-//
-///**
-// * Returns a Boolean value that indicates whether two values are equal within a
-// * specified tolerance.
-// *
-// * - Parameters:
-// *   - value: The left-hand side value.
-// *   - other: The right-hand side value.
-// *   - tolerance: A double-precision value that specifies the tolerance.
-// *
-// * - Returns: A Boolean value that indicates whether two values are equal within
-// *   a specified tolerance.
-// */
-//Foundation_Boolean
-//Foundation_FloatingPoint64_CheckEquality(Foundation_FloatingPoint64 value,
-//                                         Foundation_FloatingPoint64 other,
-//                                         Foundation_FloatingPoint64 tolerance);
+
+/**
+ * Returns a Boolean value that indicates whether two values are equal within a
+ * specified tolerance.
+ *
+ * - Parameters:
+ *   - value: The left-hand side value.
+ *   - other: The right-hand side value.
+ *   - tolerance: A double-precision value that specifies the tolerance.
+ *
+ * - Returns: A Boolean value that indicates whether two values are equal within
+ *   a specified tolerance.
+ */
+Foundation_Boolean
+Foundation_FloatingPoint64_CheckEquality(Foundation_FloatingPoint64 value,
+                                         Foundation_FloatingPoint64 other,
+                                         Foundation_FloatingPoint64 tolerance);
 
 /* MARK: - Elementary Functions */
 

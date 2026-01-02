@@ -37,12 +37,19 @@ Foundation_FloatingPoint64_TakeSquareRoot(Foundation_FloatingPoint64 value) {
 //                                       Foundation_FloatingPoint64 y) {
 //  return x > y ? x : y;
 //}
-//
-//Foundation_Boolean
-//Foundation_FloatingPoint64_CheckEquality(Foundation_FloatingPoint64 value,
-//                                         Foundation_FloatingPoint64 other,
-//                                         Foundation_FloatingPoint64 tolerance) {
-//}
+
+Foundation_Boolean
+Foundation_FloatingPoint64_CheckEquality(Foundation_FloatingPoint64 value,
+                                         Foundation_FloatingPoint64 other,
+                                         Foundation_FloatingPoint64 tolerance) {
+  if (value == other) {
+    return true;
+  }
+
+  Foundation_FloatingPoint64 delta = value - other;
+
+  return fabs(delta) < tolerance;
+}
 
 /* MARK: - Elementary Functions */
 
