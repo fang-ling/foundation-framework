@@ -51,6 +51,11 @@ Foundation_FloatingPoint64_CheckEquality(Foundation_FloatingPoint64 value,
   return fabs(delta) < tolerance;
 }
 
+Foundation_FloatingPoint64
+Foundation_FloatingPoint64_MakeAbsolute(Foundation_FloatingPoint64 value) {
+  return fabs(value);
+}
+
 /* MARK: - Elementary Functions */
 
 Foundation_FloatingPoint64

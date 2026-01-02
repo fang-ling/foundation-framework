@@ -83,6 +83,16 @@ Foundation_FloatingPoint64_CheckEquality(Foundation_FloatingPoint64 value,
                                          Foundation_FloatingPoint64 other,
                                          Foundation_FloatingPoint64 tolerance);
 
+/**
+ * Returns the absolute value of the given number.
+ *
+ * - Parameter value: A floating-point number.
+ *
+ * - Returns: The absolute value of the given number.
+ */
+Foundation_FloatingPoint64
+Foundation_FloatingPoint64_MakeAbsolute(Foundation_FloatingPoint64 value);
+
 /* MARK: - Elementary Functions */
 
 /**

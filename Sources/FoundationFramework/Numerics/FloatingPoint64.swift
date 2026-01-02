@@ -42,31 +42,30 @@ extension FloatingPoint64 {
     return Foundation_FloatingPoint64_CheckEquality(self, other, tolerance)
   }
 
-  /* MARK: - Elementary Functions */
-
-  /// Returns the cosine of the value.
+  /// Returns the absolute value of this number.
   ///
-  /// The value will be interpreted as an angle measured in radians.
-  ///
-  /// - Parameter value: A floating-point number.
-  ///
-  /// - Returns: The cosine of the value.
-  public static func calculateCosine(
-    _ value: FloatingPoint64
-  ) -> FloatingPoint64 {
-    return Foundation_FloatingPoint64_CalculateCosine(value)
+  /// - Returns: The absolute value of this number.
+  public func makeAbsolute() -> Self {
+    return Foundation_FloatingPoint64_MakeAbsolute(self)
   }
 
-  /// Returns the sine of the value.
+  /* MARK: - Elementary Functions */
+
+  /// Returns the cosine of this number.
   ///
   /// The value will be interpreted as an angle measured in radians.
   ///
-  /// - Parameter value: A floating-point number.
+  /// - Returns: The cosine of this number.
+  public func calculateCosine() -> Self {
+    return Foundation_FloatingPoint64_CalculateCosine(self)
+  }
+
+  /// Returns the sine of this number.
   ///
-  /// - Returns: The sine of the value.
-  public static func calculateSine(
-    _ value: FloatingPoint64
-  ) -> FloatingPoint64 {
-    return Foundation_FloatingPoint64_CalculateSine(value)
+  /// The value will be interpreted as an angle measured in radians.
+  ///
+  /// - Returns: The sine of this number.
+  public func calculateSine() -> Self {
+    return Foundation_FloatingPoint64_CalculateSine(self)
   }
 }
