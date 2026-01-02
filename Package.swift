@@ -24,18 +24,25 @@ import PackageDescription
 let package = Package(
   name: "foundation-framework",
   products: [
-    .library(name: "FoundationFramework", targets: ["FoundationFramework"])
-  ],
-  dependencies: [
-    .package(url: "https://github.com/apple/swift-numerics", from: "1.0.0")
+    .library(
+      name: "FoundationFramework",
+      targets: ["CFoundationFramework", "FoundationFramework"]
+    )
   ],
   targets: [
-    .target(name: "FoundationFramework"),
+    .target(
+      name: "CFoundationFramework",
+      publicHeadersPath: "Includes"
+    ),
+    .target(
+      name: "FoundationFramework",
+      dependencies: ["CFoundationFramework"]
+    ),
     .testTarget(
       name: "FoundationFrameworkTests",
       dependencies: [
-        "FoundationFramework",
-        .product(name: "Numerics", package: "swift-numerics")
+        "CFoundationFramework",
+        "FoundationFramework"
       ]
     )
   ],

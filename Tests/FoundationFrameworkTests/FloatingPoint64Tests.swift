@@ -17,22 +17,8 @@
 //  limitations under the License.
 //
 
-@testable import FoundationFramework
-import RealModule
+@testable import CFoundationFramework
 import Testing
 
 @Suite("FloatingPoint64Tests")
-struct FloatingPoint64Tests {
-  @Test func testSquareNumber() {
-    #expect(Foundation_FloatingPoint64_TakeSquareRoot(374732164) == 19358)
-  }
-
-  @Test func testZero() {
-    #expect(Foundation_FloatingPoint64_TakeSquareRoot(0) == 0)
-  }
-
-  @Test func testNonSquareNumber() {
-    let squareRoot = Foundation_FloatingPoint64_TakeSquareRoot(12333)
-    #expect(squareRoot.isApproximatelyEqual(to: 111.054040899))
-  }
-}
+struct FloatingPoint64Tests { }

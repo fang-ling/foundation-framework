@@ -1,8 +1,8 @@
 //
-//  FloatingPoint64.c
+//  FoundationFramework.h
 //  foundation-framework
 //
-//  Created by Fang Ling on 2025/12/27.
+//  Created by Fang Ling on 2025/12/7.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -17,11 +17,10 @@
 //  limitations under the License.
 //
 
-#include "FloatingPoint64.h"
+#ifndef FoundationFramework_h
+#define FoundationFramework_h
 
-#include <math.h>
+#include "../../Numerics/FloatingPoint64.h"
+#include "../../Numerics/Integer64.h"
 
-Foundation_FloatingPoint64
-Foundation_FloatingPoint64_TakeSquareRoot(Foundation_FloatingPoint64 value) {
-  return sqrt(value);
-}
+#endif /* FoundationFramework_h */

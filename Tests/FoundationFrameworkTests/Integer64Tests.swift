@@ -17,7 +17,7 @@
 //  limitations under the License.
 //
 
-@testable import FoundationFramework
+@testable import CFoundationFramework
 import Testing
 
 @Suite("Integer64Tests")
