@@ -1,8 +1,8 @@
 //
-//  Boolean.h
+//  FoundationFramework.h
 //  foundation-framework
 //
-//  Created by Fang Ling on 2026/1/2.
+//  Created by Fang Ling on 2025/12/7.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -17,11 +17,11 @@
 //  limitations under the License.
 //
 
-#ifndef Boolean_h
-#define Boolean_h
+#ifndef FoundationFramework_h
+#define FoundationFramework_h
 
-#include <stdbool.h>
+#include "../../Numerics/Boole.h"
+//#include "../../Numerics/FloatingPoint64.h"
+//#include "../../Numerics/Integer64.h"
 
-typedef bool Foundation_Boolean;
-
-#endif /* Boolean_h */
+#endif /* FoundationFramework_h */

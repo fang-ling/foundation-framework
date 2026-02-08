@@ -1,8 +1,8 @@
 //
-//  Integer64Tests.swift
+//  Boole.h
 //  foundation-framework
 //
-//  Created by Fang Ling on 2025/12/7.
+//  Created by Fang Ling on 2026/1/2.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -17,20 +17,15 @@
 //  limitations under the License.
 //
 
-@testable import FoundationFramework
-import Testing
+#ifndef Boole_h
+#define Boole_h
 
-@Suite("Integer64Tests")
-struct Integer64Tests {
-  @Test func testPositive() {
-//    #expect(Foundation_Integer64_MakeAbsolute(19358) == 19358)
-  }
+#if defined __has_include && __has_include(<swift/bridging>)
+#include <swift/bridging>
+#endif
 
-  @Test func testZero() {
-//    #expect(Foundation_Integer64_MakeAbsolute(0) == 0)
-  }
+#include <stdbool.h>
 
-  @Test func testNegative() {
-//    #expect(Foundation_Integer64_MakeAbsolute(-12333) == 12333)
-  }
-}
+typedef bool Foundation_Boole SWIFT_NAME(Boole);
+
+#endif /* Boole_h */

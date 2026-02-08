@@ -1,8 +1,8 @@
 //
-//  FoundationFramework.h
+//  Integer32.h
 //  foundation-framework
 //
-//  Created by Fang Ling on 2025/12/7.
+//  Created by Fang Ling on 2026/1/26.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -17,10 +17,12 @@
 //  limitations under the License.
 //
 
-#ifndef FoundationFramework_h
-#define FoundationFramework_h
+#ifndef Integer32_h
+#define Integer32_h
 
-#include "../../Numerics/FloatingPoint64.h"
-#include "../../Numerics/Integer64.h"
+/**
+ * A 32-bit unsigned integer value type.
+ */
+typedef unsigned int Foundation_UnsignedInteger32;
 
-#endif /* FoundationFramework_h */
+#endif /* Integer32_h */

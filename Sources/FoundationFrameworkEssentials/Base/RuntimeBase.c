@@ -1,8 +1,8 @@
 //
-//  Integer64Tests.swift
+//  RuntimeBase.c
 //  foundation-framework
 //
-//  Created by Fang Ling on 2025/12/7.
+//  Created by Fang Ling on 2026/1/26.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -17,20 +17,29 @@
 //  limitations under the License.
 //
 
-@testable import FoundationFramework
-import Testing
+#include "RuntimeBase.h"
 
-@Suite("Integer64Tests")
-struct Integer64Tests {
-  @Test func testPositive() {
-//    #expect(Foundation_Integer64_MakeAbsolute(19358) == 19358)
+void Foundation_RuntimeBase_Retain(struct Foundation_RuntimeBase* runtime) {
+  if (!runtime) {
+    return;
   }
 
-  @Test func testZero() {
-//    #expect(Foundation_Integer64_MakeAbsolute(0) == 0)
+  __atomic_fetch_add(&runtime->retainCount, 1, __ATOMIC_RELAXED);
+}
+
+Foundation_Boole
+Foundation_RuntimeBase_Release(struct Foundation_RuntimeBase* runtime) {
+  if (!runtime) {
+    return 0;
   }
 
-  @Test func testNegative() {
-//    #expect(Foundation_Integer64_MakeAbsolute(-12333) == 12333)
+  Foundation_UnsignedInteger32 oldCount =
+    __atomic_fetch_sub(&runtime->retainCount, 1, __ATOMIC_RELEASE);
+
+  if (oldCount == 1) {
+    __atomic_thread_fence(__ATOMIC_ACQUIRE);
+    return true;
   }
+
+  return false;
 }

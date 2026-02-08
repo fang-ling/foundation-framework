@@ -1,8 +1,8 @@
 //
-//  Integer64.c
+//  RuntimeBase.h
 //  foundation-framework
 //
-//  Created by Fang Ling on 2025/12/7.
+//  Created by Fang Ling on 2026/1/26.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -17,8 +17,19 @@
 //  limitations under the License.
 //
 
-#include "Integer64.h"
+#ifndef RuntimeBase_h
+#define RuntimeBase_h
 
-Foundation_Integer64 Foundation_Integer64_MakeAbsolute(Foundation_Integer64 x) {
-  return x < 0 ? -x : x;
-}
+#include "../Numerics/Boole.h"
+#include "../Numerics/Integer32.h"
+
+struct Foundation_RuntimeBase {
+  Foundation_UnsignedInteger32 retainCount;
+};
+
+void Foundation_RuntimeBase_Retain(struct Foundation_RuntimeBase* runtime);
+
+Foundation_Boole
+Foundation_RuntimeBase_Release(struct Foundation_RuntimeBase* runtime);
+
+#endif /* RuntimeBase_h */

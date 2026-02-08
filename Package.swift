@@ -24,24 +24,27 @@ import PackageDescription
 let package = Package(
   name: "foundation-framework",
   products: [
-    .library(
-      name: "FoundationFramework",
-      targets: ["CFoundationFramework", "FoundationFramework"]
-    )
+    .library(name: "FoundationFramework", targets: ["FoundationFramework"])
   ],
   targets: [
     .target(
-      name: "CFoundationFramework",
+      name: "FoundationFramework",
+      dependencies: [
+        "FoundationFrameworkEssentials",
+        "FoundationFrameworkExtras"
+      ]
+    ),
+    .target(
+      name: "FoundationFrameworkEssentials",
       publicHeadersPath: "Includes"
     ),
     .target(
-      name: "FoundationFramework",
-      dependencies: ["CFoundationFramework"]
+      name: "FoundationFrameworkExtras",
+      dependencies: ["FoundationFrameworkEssentials"]
     ),
     .testTarget(
       name: "FoundationFrameworkTests",
       dependencies: [
-        "CFoundationFramework",
         "FoundationFramework"
       ]
     )

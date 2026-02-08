@@ -1,8 +1,8 @@
 //
-//  Boolean.swift
+//  FoundationFramework.swift
 //  foundation-framework
 //
-//  Created by Fang Ling on 2026/1/2.
+//  Created by Fang Ling on 2026/2/4.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -17,4 +17,5 @@
 //  limitations under the License.
 //
 
-public typealias Boolean = Bool
+@_exported import FoundationFrameworkEssentials
+@_exported import FoundationFrameworkExtras
