@@ -1,5 +1,5 @@
 //
-//  RuntimeBase.c
+//  ObjectBase.c
 //  foundation-framework
 //
 //  Created by Fang Ling on 2026/1/26.
@@ -17,27 +17,26 @@
 //  limitations under the License.
 //
 
-#include "RuntimeBase.h"
+#include "ObjectBase.h"
 
-void Foundation_RuntimeBase_Retain(struct Foundation_RuntimeBase* runtime) {
-  if (!runtime) {
-    return;
-  }
+#include "Base.h"
 
-  __atomic_fetch_add(&runtime->retainCount, 1, __ATOMIC_RELAXED);
+void
+Foundation_ObjectBase_Retain(const struct Foundation_ObjectBase* objectBase) {
+  let mutableObjectBase = (struct Foundation_ObjectBase*)objectBase;
+  __atomic_fetch_add(&mutableObjectBase->retainCount, 1, __ATOMIC_RELAXED);
 }
 
-Foundation_Boole
-Foundation_RuntimeBase_Release(struct Foundation_RuntimeBase* runtime) {
-  if (!runtime) {
-    return 0;
-  }
-
-  Foundation_UnsignedInteger32 oldCount =
-    __atomic_fetch_sub(&runtime->retainCount, 1, __ATOMIC_RELEASE);
+Foundation_Boolean
+Foundation_ObjectBase_Release(const struct Foundation_ObjectBase* objectBase) {
+  let mutableObjectBase = (struct Foundation_ObjectBase*)objectBase;
+  let oldCount = __atomic_fetch_sub(&mutableObjectBase->retainCount,
+                                    1,
+                                    __ATOMIC_RELEASE);
 
   if (oldCount == 1) {
     __atomic_thread_fence(__ATOMIC_ACQUIRE);
+
     return true;
   }
 

@@ -1,8 +1,8 @@
 //
-//  BooleanLogic.c
+//  Integer64.swift
 //  foundation-framework
 //
-//  Created by Fang Ling on 2026/1/2.
+//  Created by Fang Ling on 2026/2/10.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -17,4 +17,6 @@
 //  limitations under the License.
 //
 
-#include "Boole.h"
+import FoundationFrameworkEssentials
+
+public typealias UnsignedInteger64 = Foundation_UnsignedInteger64

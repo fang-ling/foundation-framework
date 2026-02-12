@@ -1,5 +1,5 @@
 //
-//  Boole.h
+//  Boolean.c
 //  foundation-framework
 //
 //  Created by Fang Ling on 2026/1/2.
@@ -17,15 +17,4 @@
 //  limitations under the License.
 //
 
-#ifndef Boole_h
-#define Boole_h
-
-#if defined __has_include && __has_include(<swift/bridging>)
-#include <swift/bridging>
-#endif
-
-#include <stdbool.h>
-
-typedef bool Foundation_Boole SWIFT_NAME(Boole);
-
-#endif /* Boole_h */
+#include "Boolean.h"

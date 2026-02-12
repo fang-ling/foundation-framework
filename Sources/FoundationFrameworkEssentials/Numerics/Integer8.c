@@ -1,8 +1,8 @@
 //
-//  FoundationFramework.h
+//  Integer8.c
 //  foundation-framework
 //
-//  Created by Fang Ling on 2025/12/7.
+//  Created by Fang Ling on 2026/2/9.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -17,17 +17,4 @@
 //  limitations under the License.
 //
 
-#ifndef FoundationFramework_h
-#define FoundationFramework_h
-
-#include "../../Data/Data.h"
-
-#include "../../Miscellanies/Base.h"
-#include "../../Miscellanies/ObjectBase.h"
-
-#include "../../Numerics/Boolean.h"
-//#include "../../Numerics/FloatingPoint64.h"
-#include "../../Numerics/Integer8.h"
-#include "../../Numerics/Integer64.h"
-
-#endif /* FoundationFramework_h */
+#include "Integer8.h"

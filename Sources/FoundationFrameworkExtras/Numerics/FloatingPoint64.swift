@@ -18,7 +18,9 @@
 //
 
 import FoundationFrameworkEssentials
+
 //func a() {
+//  var a = Data()
 //  var a: Boolean = 0;
 //}
 
