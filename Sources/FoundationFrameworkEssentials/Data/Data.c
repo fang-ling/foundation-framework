@@ -39,9 +39,7 @@ Foundation_Data_Initialize(const Foundation_UnsignedInteger8* bytes,
   if (!data) {
     return NULL;
   }
-
-  data->_objectBase.retainCount = 0;
-  Foundation_Data_Retain(data);
+  data->_objectBase.retainCount = 1;
 
   data->_count = count;
   data->_bytes = malloc(count);
@@ -64,10 +62,20 @@ void Foundation_Data_Release(Foundation_Data data) {
 }
 
 Foundation_UnsignedInteger64 Foundation_Data_GetCount(Foundation_Data data) {
-  return data->_count;
+  Foundation_Data_Retain(data);
+
+  let count = data->_count;
+
+  Foundation_Data_Release(data);
+  return count;
 }
 
 const Foundation_UnsignedInteger8*
 Foundation_Data_GetBytes(Foundation_Data data) {
-  return data->_bytes;
+  Foundation_Data_Retain(data);
+
+  let bytes = data->_bytes;
+
+  Foundation_Data_Release(data);
+  return bytes;
 }

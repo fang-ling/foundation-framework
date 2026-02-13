@@ -44,4 +44,8 @@ extension Data {
   public var bytes: UnsafePointer<UnsignedInteger8> {
     return Foundation_Data_GetBytes(_data)
   }
+
+  public var cData: Foundation_Data {
+    return _data;
+  }
 }
