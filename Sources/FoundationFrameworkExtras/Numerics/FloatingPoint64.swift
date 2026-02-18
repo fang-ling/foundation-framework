@@ -29,7 +29,6 @@ extension FloatingPoint64 {
 }
 
 /* MARK: - Common Floating-Point Operations */
-
 extension FloatingPoint64 {
   public func takeSquareRoot() -> Self {
     return Foundation_FloatingPoint64_TakeSquareRoot(self)

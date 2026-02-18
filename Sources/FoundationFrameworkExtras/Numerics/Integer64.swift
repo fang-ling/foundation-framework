@@ -19,4 +19,12 @@
 
 import FoundationFrameworkEssentials
 
+public typealias Integer64 = Foundation_Integer64
 public typealias UnsignedInteger64 = Foundation_UnsignedInteger64
+
+/* MARK: - Common Arithmetic Operations */
+extension Integer64 {
+  public func makeAbsolute() -> Self {
+    return Foundation_Integer64_MakeAbsolute(self)
+  }
+}
