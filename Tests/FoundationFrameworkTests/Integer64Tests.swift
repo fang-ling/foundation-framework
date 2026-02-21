@@ -22,12 +22,12 @@ import Testing
 
 @Suite("Integer64Tests")
 struct Integer64Tests {
-  @Test func testPositive() {
-//    #expect(Foundation_Integer64_MakeAbsolute(19358) == 19358)
+  @Test func testFindingMinimum() {
+    #expect(Integer64.findMinimum(19358, 12333) == 12333)
   }
 
-  @Test func testZero() {
-//    #expect(Foundation_Integer64_MakeAbsolute(0) == 0)
+  @Test func testFindingMaximum() {
+    #expect(Integer64.findMaximum(-1, 1 << 23) == 1 << 23)
   }
 
   @Test func testNegative() {

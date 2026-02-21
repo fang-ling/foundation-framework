@@ -28,6 +28,11 @@
  * ### Finding the Sign and Magnitude
  *
  * - ``Foundation_Integer64_MakeAbsolute``
+ *
+ * ### Choosing the Smallest and Largest Value
+ *
+ * - ``Foundation_Integer64_FindMinimum``
+ * - ``Foundation_Integer64_FindMaximum``
  */
 typedef long long Foundation_Integer64;
 
@@ -36,7 +41,7 @@ typedef long long Foundation_Integer64;
  */
 typedef unsigned long long Foundation_UnsignedInteger64;
 
-/* MARK: - Common Arithmetic Operations */
+/* MARK: - Finding the Sign and Magnitude */
 /**
  * Returns the absolute value of the given number.
  *
@@ -54,5 +59,30 @@ typedef unsigned long long Foundation_UnsignedInteger64;
  * - Returns: The absolute value of x.
  */
 Foundation_Integer64 Foundation_Integer64_MakeAbsolute(Foundation_Integer64 x);
+
+/* MARK: - Choosing the Smallest and Largest Value */
+/**
+ * Returns the lesser of two comparable values.
+ *
+ * - Parameters:
+ *   - x: A value to compare.
+ *   - y: Another value to compare.
+ *
+ * - Returns: The lesser of x and y. If x is equal to y, returns x.
+ */
+Foundation_Integer64 Foundation_Integer64_FindMinimum(Foundation_Integer64 x,
+                                                      Foundation_Integer64 y);
+
+/**
+ * Returns the greater of two comparable values.
+ *
+ * - Parameters:
+ *   - x: A value to compare.
+ *   - y: Another value to compare.
+ *
+ * - Returns: The greater of x and y. If x is equal to y, returns y.
+ */
+Foundation_Integer64 Foundation_Integer64_FindMaximum(Foundation_Integer64 x,
+                                                      Foundation_Integer64 y);
 
 #endif /* Integer64_h */

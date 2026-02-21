@@ -22,3 +22,13 @@
 Foundation_Integer64 Foundation_Integer64_MakeAbsolute(Foundation_Integer64 x) {
   return x < 0 ? -x : x;
 }
+
+Foundation_Integer64 Foundation_Integer64_FindMinimum(Foundation_Integer64 x,
+                                                      Foundation_Integer64 y) {
+  return x > y ? y : x;
+}
+
+Foundation_Integer64 Foundation_Integer64_FindMaximum(Foundation_Integer64 x,
+                                                      Foundation_Integer64 y) {
+  return x > y ? x : y;
+}

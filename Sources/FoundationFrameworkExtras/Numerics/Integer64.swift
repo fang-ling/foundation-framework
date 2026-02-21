@@ -22,9 +22,20 @@ import FoundationFrameworkEssentials
 public typealias Integer64 = Foundation_Integer64
 public typealias UnsignedInteger64 = Foundation_UnsignedInteger64
 
-/* MARK: - Common Arithmetic Operations */
+/* MARK: - Finding the Sign and Magnitude */
 extension Integer64 {
   public func makeAbsolute() -> Self {
     return Foundation_Integer64_MakeAbsolute(self)
+  }
+}
+
+/* MARK: - Choosing the Smallest and Largest Value */
+extension Integer64 {
+  public static func findMinimum(_ x: Self, _ y: Self) -> Self {
+    return Foundation_Integer64_FindMinimum(x, y)
+  }
+
+  public static func findMaximum(_ x: Self, _ y: Self) -> Self {
+    return Foundation_Integer64_FindMaximum(x, y)
   }
 }
