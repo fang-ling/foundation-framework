@@ -28,6 +28,7 @@
 
 #define ASSUME_NONNULL_BEGIN #pragma clang assume_nonnull begin
 #define ASSUME_NONNULL_END #pragma clang assume_nonnull end
+#define NULLABLE _Nullable
 #else
 /*
  * Empty defines for online-judge's compiler that don't support
@@ -58,6 +59,7 @@
  */
 #define ASSUME_NONNULL_BEGIN
 #define ASSUME_NONNULL_END
+#define NULLABLE
 #endif
 
 #endif /* Base_h */
