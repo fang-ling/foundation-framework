@@ -18,34 +18,3 @@
 //
 
 import FoundationFrameworkEssentials
-
-/* MARK: - Creating and Destroying a Data Object */
-public class Data {
-  private let _data: Foundation_Data
-
-  public init(
-    bytes: UnsafePointer<UnsignedInteger8>,
-    count: UnsignedInteger64
-  ) {
-    _data = Foundation_Data_Initialize(bytes, count)
-  }
-
-  deinit {
-    Foundation_Data_Release(_data)
-  }
-}
-
-/* MARK: - Examining a Data Object */
-extension Data {
-  public var count: UnsignedInteger64 {
-    return Foundation_Data_GetCount(_data)
-  }
-
-  public var bytes: UnsafePointer<UnsignedInteger8> {
-    return Foundation_Data_GetBytes(_data)
-  }
-
-  public var cData: Foundation_Data {
-    return _data;
-  }
-}

@@ -25,6 +25,9 @@
 
 #ifndef ONLINE_JUDGE
 #include <swift/bridging>
+
+#define ASSUME_NONNULL_BEGIN #pragma clang assume_nonnull begin
+#define ASSUME_NONNULL_END #pragma clang assume_nonnull end
 #else
 /*
  * Empty defines for online-judge's compiler that don't support
@@ -48,6 +51,13 @@
 #define SWIFT_RETURNS_RETAINED
 #define SWIFT_RETURNS_UNRETAINED
 #define SWIFT_PRIVATE_FILEID(_fileID)
+
+/*
+ * Empty defines for online-judge's compiler that don't support nullability
+ * checks.
+ */
+#define ASSUME_NONNULL_BEGIN
+#define ASSUME_NONNULL_END
 #endif
 
 #endif /* Base_h */

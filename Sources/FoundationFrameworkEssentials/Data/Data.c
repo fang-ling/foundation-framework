@@ -22,23 +22,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "../Miscellanies/Base.h"
-#include "../Miscellanies/ObjectBase.h"
-
-struct _Foundation_Data {
-  struct Foundation_ObjectBase _objectBase;
-
-  Foundation_UnsignedInteger8* _bytes;
-  Foundation_UnsignedInteger64 _count;
-};
+#pragma clang assume_nonnull begin
 
 Foundation_Data
 Foundation_Data_Initialize(const Foundation_UnsignedInteger8* bytes,
                            Foundation_UnsignedInteger64 count) {
   let data = (struct _Foundation_Data*)malloc(sizeof(struct _Foundation_Data));
-  if (!data) {
-    return NULL;
-  }
   data->_objectBase.retainCount = 1;
 
   data->_count = count;
@@ -58,6 +47,8 @@ void Foundation_Data_Release(Foundation_Data data) {
   if (shouldDeallocate) {
     free(data->_bytes);
     free((struct _Foundation_Data*)data);
+
+    data = NULL;
   }
 }
 
@@ -79,3 +70,5 @@ Foundation_Data_GetBytes(Foundation_Data data) {
   Foundation_Data_Release(data);
   return bytes;
 }
+
+#pragma clang assume_nonnull end

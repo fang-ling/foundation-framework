@@ -22,8 +22,18 @@
 
 #include "../Numerics/Integer8.h"
 #include "../Numerics/Integer64.h"
+#include "../Miscellanies/ObjectBase.h"
 
-struct _Foundation_Data;
+#pragma clang assume_nonnull begin
+
+struct _Foundation_Data {
+  struct Foundation_ObjectBase _objectBase;
+
+  Foundation_UnsignedInteger8* _bytes;
+  Foundation_UnsignedInteger64 _count;
+}
+SWIFT_NAME(Data)
+SWIFT_SHARED_REFERENCE(Foundation_Data_Retain, Foundation_Data_Release);
 
 /**
  * A static byte buffer in memory.
@@ -73,7 +83,9 @@ typedef const struct _Foundation_Data* Foundation_Data;
  */
 Foundation_Data
 Foundation_Data_Initialize(const Foundation_UnsignedInteger8* bytes,
-                           Foundation_UnsignedInteger64 count);
+                           Foundation_UnsignedInteger64 count)
+SWIFT_NAME(Data.init(bytes:count:))
+SWIFT_RETURNS_RETAINED;
 
 /**
  * Retains a data object.
@@ -100,7 +112,8 @@ void Foundation_Data_Release(Foundation_Data data);
  *
  * - Returns: An integer that specifies the number of bytes in the data.
  */
-Foundation_UnsignedInteger64 Foundation_Data_GetCount(Foundation_Data data);
+Foundation_UnsignedInteger64 Foundation_Data_GetCount(Foundation_Data data)
+SWIFT_NAME(getter:Data.count(self:));
 
 /**
  * Returns a read-only pointer to the bytes of a data object.
@@ -110,6 +123,9 @@ Foundation_UnsignedInteger64 Foundation_Data_GetCount(Foundation_Data data);
  * - Returns: A read-only pointer to the bytes associated with the data.
  */
 const Foundation_UnsignedInteger8*
-Foundation_Data_GetBytes(Foundation_Data data);
+Foundation_Data_GetBytes(Foundation_Data data)
+SWIFT_NAME(getter:Data.bytes(self:));
+
+#pragma clang assume_nonnull end
 
 #endif /* Data_h */
