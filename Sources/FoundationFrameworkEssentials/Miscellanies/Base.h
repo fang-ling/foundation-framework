@@ -23,4 +23,31 @@
 #define var __auto_type
 #define let const __auto_type
 
+#ifndef ONLINE_JUDGE
+#include <swift/bridging>
+#else
+/*
+ * Empty defines for online-judge's compiler that don't support
+ * `attribute(swift_attr)`.
+ */
+#define SWIFT_SELF_CONTAINED
+#define SWIFT_RETURNS_INDEPENDENT_VALUE
+#define SWIFT_SHARED_REFERENCE(_retain, _release)
+#define SWIFT_IMMORTAL_REFERENCE
+#define SWIFT_UNSAFE_REFERENCE
+#define SWIFT_NAME(_name)
+#define SWIFT_CONFORMS_TO_PROTOCOL(_moduleName_protocolName)
+#define SWIFT_COMPUTED_PROPERTY
+#define SWIFT_MUTATING
+#define SWIFT_UNCHECKED_SENDABLE
+#define SWIFT_NONCOPYABLE
+#define SWIDT_NONCOPYABLE_WITH_DESTROY(_destroy)
+#define SWIFT_NONESCAPABLE
+#define SWIFT_ESCAPABLE
+#define SWIFT_ESCAPABLE_IF(...)
+#define SWIFT_RETURNS_RETAINED
+#define SWIFT_RETURNS_UNRETAINED
+#define SWIFT_PRIVATE_FILEID(_fileID)
+#endif
+
 #endif /* Base_h */
