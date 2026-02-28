@@ -71,8 +71,8 @@ Foundation_ObjectBase_Retain(const struct Foundation_ObjectBase* objectBase);
  *
  * - Parameter objectBase: An object to release. This value must not be `NULL`.
  *
- * - Returns: A Boolean value indicating whether the object is eligible to be
- *   deallocated and destroyed.
+ * - Returns: A BinaryLogic value indicating whether the object is eligible to
+ *   be deallocated and destroyed.
  */
 Foundation_BinaryLogic
 Foundation_ObjectBase_Release(const struct Foundation_ObjectBase* objectBase);

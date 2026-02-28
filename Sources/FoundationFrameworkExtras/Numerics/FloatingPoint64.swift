@@ -19,8 +19,6 @@
 
 import FoundationFrameworkEssentials
 
-public typealias FloatingPoint64 = Double
-
 /* MARK: - Numeric Constants */
 extension FloatingPoint64 {
   public static var π: Self {

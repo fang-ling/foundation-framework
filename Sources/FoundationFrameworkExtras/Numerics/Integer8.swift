@@ -18,5 +18,3 @@
 //
 
 import FoundationFrameworkEssentials
-
-public typealias UnsignedInteger8 = Foundation_UnsignedInteger8

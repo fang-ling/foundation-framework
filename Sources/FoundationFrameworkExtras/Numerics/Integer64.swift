@@ -19,9 +19,6 @@
 
 import FoundationFrameworkEssentials
 
-public typealias Integer64 = Foundation_Integer64
-public typealias UnsignedInteger64 = Foundation_UnsignedInteger64
-
 /* MARK: - Finding the Sign and Magnitude */
 extension Integer64 {
   public func makeAbsolute() -> Self {

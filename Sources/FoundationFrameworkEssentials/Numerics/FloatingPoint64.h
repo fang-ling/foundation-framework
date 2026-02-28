@@ -25,7 +25,7 @@
 /**
  * A double-precision, floating-point value type.
  */
-typedef double Foundation_FloatingPoint64;
+typedef double Foundation_FloatingPoint64 SWIFT_NAME(FloatingPoint64);
 
 /* MARK: - Numeric Constants */
 /**
@@ -65,16 +65,16 @@ Foundation_FloatingPoint64_TakeSquareRoot(Foundation_FloatingPoint64 value);
 ////                                       Foundation_FloatingPoint64 y);
 
 /**
- * Returns a Boolean value that indicates whether two values are equal within a
- * specified tolerance.
+ * Returns a BinaryLogic value that indicates whether two values are equal
+ * within a specified tolerance.
  *
  * - Parameters:
  *   - value: The left-hand side value.
  *   - other: The right-hand side value.
  *   - tolerance: A double-precision value that specifies the tolerance.
  *
- * - Returns: A Boolean value that indicates whether two values are equal within
- *   a specified tolerance.
+ * - Returns: A BinaryLogic value that indicates whether two values are equal
+ *   within a specified tolerance.
  */
 Foundation_BinaryLogic
 Foundation_FloatingPoint64_CheckEquality(Foundation_FloatingPoint64 value,

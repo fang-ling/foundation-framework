@@ -20,6 +20,8 @@
 #ifndef Integer64_h
 #define Integer64_h
 
+#include "../Miscellanies/Base.h"
+
 /**
  * A 64-bit signed integer value type.
  *
@@ -34,12 +36,13 @@
  * - ``Foundation_Integer64_FindMinimum``
  * - ``Foundation_Integer64_FindMaximum``
  */
-typedef long long Foundation_Integer64;
+typedef long long Foundation_Integer64 SWIFT_NAME(Integer64);
 
 /**
  * A 64-bit unsigned integer value type.
  */
-typedef unsigned long long Foundation_UnsignedInteger64;
+typedef unsigned long long Foundation_UnsignedInteger64
+SWIFT_NAME(UnsignedInteger64);
 
 /* MARK: - Finding the Sign and Magnitude */
 /**
