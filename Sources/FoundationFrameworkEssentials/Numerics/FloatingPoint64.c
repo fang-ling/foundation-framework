@@ -34,7 +34,7 @@ Foundation_FloatingPoint64_TakeSquareRoot(Foundation_FloatingPoint64 value) {
 ////  return x > y ? x : y;
 ////}
 
-Foundation_Boolean
+Foundation_BinaryLogic
 Foundation_FloatingPoint64_CheckEquality(Foundation_FloatingPoint64 value,
                                          Foundation_FloatingPoint64 other,
                                          Foundation_FloatingPoint64 tolerance) {

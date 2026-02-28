@@ -25,7 +25,7 @@
 #include "../../Miscellanies/Base.h"
 #include "../../Miscellanies/ObjectBase.h"
 
-#include "../../Numerics/Boolean.h"
+#include "../../Numerics/BinaryLogic.h"
 #include "../../Numerics/FloatingPoint64.h"
 #include "../../Numerics/Integer8.h"
 #include "../../Numerics/Integer64.h"

@@ -34,7 +34,7 @@ extension FloatingPoint64 {
     return Foundation_FloatingPoint64_TakeSquareRoot(self)
   }
 
-  public func checkEquality(to other: Self, tolerance: Self) -> Boolean {
+  public func checkEquality(to other: Self, tolerance: Self) -> BinaryLogic {
     return Foundation_FloatingPoint64_CheckEquality(self, other, tolerance)
   }
 

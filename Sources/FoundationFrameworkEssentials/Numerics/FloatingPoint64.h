@@ -20,7 +20,7 @@
 #ifndef FloatingPoint64_h
 #define FloatingPoint64_h
 
-#include "Boolean.h"
+#include "BinaryLogic.h"
 
 /**
  * A double-precision, floating-point value type.
@@ -76,7 +76,7 @@ Foundation_FloatingPoint64_TakeSquareRoot(Foundation_FloatingPoint64 value);
  * - Returns: A Boolean value that indicates whether two values are equal within
  *   a specified tolerance.
  */
-Foundation_Boolean
+Foundation_BinaryLogic
 Foundation_FloatingPoint64_CheckEquality(Foundation_FloatingPoint64 value,
                                          Foundation_FloatingPoint64 other,
                                          Foundation_FloatingPoint64 tolerance);

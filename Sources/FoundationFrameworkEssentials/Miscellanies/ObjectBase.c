@@ -27,7 +27,7 @@ Foundation_ObjectBase_Retain(const struct Foundation_ObjectBase* objectBase) {
   __atomic_fetch_add(&mutableObjectBase->retainCount, 1, __ATOMIC_RELAXED);
 }
 
-Foundation_Boolean
+Foundation_BinaryLogic
 Foundation_ObjectBase_Release(const struct Foundation_ObjectBase* objectBase) {
   let mutableObjectBase = (struct Foundation_ObjectBase*)objectBase;
   let oldCount = __atomic_fetch_sub(&mutableObjectBase->retainCount,

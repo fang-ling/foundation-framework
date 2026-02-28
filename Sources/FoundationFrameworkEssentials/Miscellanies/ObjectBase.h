@@ -20,7 +20,7 @@
 #ifndef ObjectBase_h
 #define ObjectBase_h
 
-#include "../Numerics/Boolean.h"
+#include "../Numerics/BinaryLogic.h"
 #include "../Numerics/Integer64.h"
 
 /**
@@ -74,7 +74,7 @@ Foundation_ObjectBase_Retain(const struct Foundation_ObjectBase* objectBase);
  * - Returns: A Boolean value indicating whether the object is eligible to be
  *   deallocated and destroyed.
  */
-Foundation_Boolean
+Foundation_BinaryLogic
 Foundation_ObjectBase_Release(const struct Foundation_ObjectBase* objectBase);
 
 #endif /* ObjectBase_h */

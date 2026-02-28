@@ -1,5 +1,5 @@
 //
-//  Boolean.h
+//  BinaryLogic.h
 //  foundation-framework
 //
 //  Created by Fang Ling on 2026/1/2.
@@ -17,23 +17,25 @@
 //  limitations under the License.
 //
 
-#ifndef Boolean_h
-#define Boolean_h
+#ifndef BinaryLogic_h
+#define BinaryLogic_h
 
 #include <stdbool.h>
+
+#include "../Miscellanies/Base.h"
 
 /**
  * A value type whose instances are either `true` or `false`.
  *
- * `Foundation_Boolean` represents Boolean values. Create instances of
- * `Foundation_Boolean` by using one of the Boolean literals `true` or `false`,
- * or by assigning the result of a Boolean method or operation to a variable or
- * constant.
+ * `Foundation_BinaryLogic` represents Boolean values. Create instances of
+ * `Foundation_BinaryLogic` by using one of the Boolean literals `true` or
+ * `false`, or by assigning the result of a Boolean method or operation to a
+ * variable or constant.
  *
  * ```c
- * Foundation_Boolean hasArrived = false;
+ * let hasArrived = false;
  *
- * Foundation_Boolean isLess = 100 < 101;
+ * let isLess = 100 < 101;
  * // isLess == "true"
  * ```
  *
@@ -41,6 +43,6 @@
  * help avoid accidental programming errors and to help maintain the clarity of
  * each control statement.
  */
-typedef bool Foundation_Boolean;
+typedef bool Foundation_BinaryLogic SWIFT_NAME(BinaryLogic);
 
-#endif /* Boolean_h */
+#endif /* BinaryLogic_h */

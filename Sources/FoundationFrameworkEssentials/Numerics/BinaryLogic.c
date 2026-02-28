@@ -1,5 +1,5 @@
 //
-//  Boolean.c
+//  BinaryLogic.c
 //  foundation-framework
 //
 //  Created by Fang Ling on 2026/1/2.
@@ -17,4 +17,4 @@
 //  limitations under the License.
 //
 
-#include "Boolean.h"
+#include "BinaryLogic.h"
