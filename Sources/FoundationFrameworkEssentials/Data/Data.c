@@ -22,7 +22,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#pragma clang assume_nonnull begin
+ASSUME_NONNULL_BEGIN
 
 Foundation_Data
 Foundation_Data_Initialize(const Foundation_UnsignedInteger8* bytes,
@@ -71,4 +71,4 @@ Foundation_Data_GetBytes(Foundation_Data data) {
   return bytes;
 }
 
-#pragma clang assume_nonnull end
+ASSUME_NONNULL_END

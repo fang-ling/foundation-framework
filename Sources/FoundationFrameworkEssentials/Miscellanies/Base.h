@@ -26,8 +26,8 @@
 #ifndef ONLINE_JUDGE
 #include <swift/bridging>
 
-#define ASSUME_NONNULL_BEGIN #pragma clang assume_nonnull begin
-#define ASSUME_NONNULL_END #pragma clang assume_nonnull end
+#define ASSUME_NONNULL_BEGIN _Pragma("clang assume_nonnull begin")
+#define ASSUME_NONNULL_END _Pragma("clang assume_nonnull end")
 #define NULLABLE _Nullable
 #else
 /*

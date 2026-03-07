@@ -24,7 +24,7 @@
 #include "../Numerics/Integer64.h"
 #include "../Miscellanies/ObjectBase.h"
 
-#pragma clang assume_nonnull begin
+ASSUME_NONNULL_BEGIN
 
 struct _Foundation_Data {
   struct Foundation_ObjectBase _objectBase;
@@ -126,6 +126,6 @@ const Foundation_UnsignedInteger8*
 Foundation_Data_GetBytes(Foundation_Data data)
 SWIFT_NAME(getter:Data.bytes(self:));
 
-#pragma clang assume_nonnull end
+ASSUME_NONNULL_END
 
 #endif /* Data_h */
