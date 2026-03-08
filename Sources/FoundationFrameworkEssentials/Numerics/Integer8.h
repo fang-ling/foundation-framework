@@ -20,11 +20,18 @@
 #ifndef Integer8_h
 #define Integer8_h
 
+#include <stdint.h>
+
 #include "../Miscellanies/Base.h"
+
+/**
+ * A 8-bit signed integer value type.
+ */
+typedef int8_t Foundation_Integer8 SWIFT_NAME(Integer8);
 
 /**
  * An 8-bit unsigned integer value type.
  */
-typedef unsigned char Foundation_UnsignedInteger8 SWIFT_NAME(UnsignedInteger8);
+typedef uint8_t Foundation_UnsignedInteger8 SWIFT_NAME(UnsignedInteger8);
 
 #endif /* Integer8_h */
