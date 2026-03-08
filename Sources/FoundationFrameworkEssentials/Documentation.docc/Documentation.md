@@ -15,6 +15,8 @@ time calculations, sorting and filtering, and networking.
 
 - <doc:NumbersDataAndBasicValues>
 
+- <doc:StringsAndText>
+
 ### Low-Level Utilities
 
 - ``Foundation_ObjectBase``

@@ -120,7 +120,10 @@ struct DataTests {
       start: data.bytes,
       count: Int(data.count)
     )
-    let reconstructedString = String(decoding: reconstructedBytes, as: UTF8.self)
+    let reconstructedString = Swift.String(
+      decoding: reconstructedBytes,
+      as: UTF8.self
+    )
 
     #expect(reconstructedString == string)
   }

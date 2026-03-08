@@ -47,8 +47,6 @@ void Foundation_Data_Release(Foundation_Data data) {
   if (shouldDeallocate) {
     free(data->_bytes);
     free((struct _Foundation_Data*)data);
-
-    data = NULL;
   }
 }
 

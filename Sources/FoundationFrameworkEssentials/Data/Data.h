@@ -20,9 +20,9 @@
 #ifndef Data_h
 #define Data_h
 
+#include "../Miscellanies/ObjectBase.h"
 #include "../Numerics/Integer8.h"
 #include "../Numerics/Integer64.h"
-#include "../Miscellanies/ObjectBase.h"
 
 ASSUME_NONNULL_BEGIN
 
