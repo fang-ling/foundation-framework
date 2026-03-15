@@ -21,6 +21,7 @@
 #define String_h
 
 #include "../Miscellanies/Base.h"
+#include "../Miscellanies/ComparisonResult.h"
 #include "../Miscellanies/ObjectBase.h"
 #include "../Numerics/Integer32.h"
 
@@ -70,6 +71,10 @@ SWIFT_SHARED_REFERENCE(Foundation_String_Retain, Foundation_String_Release);
  * - ``Foundation_String_InitializeWithCString``
  * - ``Foundation_String_Retain``
  * - ``Foundation_String_Release``
+ *
+ * ### Comparing Strings
+ *
+ * - ``Foundation_String_Compare``
  */
 typedef const struct _Foundation_String* Foundation_String;
 
@@ -107,6 +112,22 @@ void Foundation_String_Retain(Foundation_String string);
  *   `NULL`.
  */
 void Foundation_String_Release(Foundation_String string);
+
+/* MARK: - Comparing Strings */
+/**
+ * Compares one string with another string.
+ *
+ * - Parameters:
+ *   - string1: The first string to use in the comparison.
+ *   - string2: The second string to use in the comparison.
+ *
+ * - Returns: A ``Foundation_ComparisonResult`` value that indicates whether
+ *   the `string1` is equal to, less than, or greater than the `string2`.
+ */
+enum Foundation_ComparisonResult
+Foundation_String_Compare(Foundation_String string1,
+                          Foundation_String string2)
+SWIFT_NAME(String.compare(_:_:));
 
 ASSUME_NONNULL_END
 

@@ -69,4 +69,27 @@ void Foundation_String_Release(Foundation_String string) {
   }
 }
 
+enum Foundation_ComparisonResult
+Foundation_String_Compare(Foundation_String string1,
+                          Foundation_String string2) {
+  Foundation_String_Retain(string1);
+  Foundation_String_Retain(string2);
+
+  var characters1 = string1->_characters;
+  var characters2 = string2->_characters;
+
+  while (*characters1 == *characters2++) {
+    if (*characters1++ == '\0') {
+      return Foundation_ComparisonResult_EqualTo;
+    }
+  }
+
+  let result = (*characters1 - *--characters2) < 0
+    ? Foundation_ComparisonResult_LessThan
+    : Foundation_ComparisonResult_GreaterThan;
+
+  Foundation_String_Release(string1);
+  Foundation_String_Release(string2);
+}
+
 ASSUME_NONNULL_END
