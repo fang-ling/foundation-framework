@@ -27,7 +27,7 @@
 /**
  * A 8-bit signed integer value type.
  */
-typedef int8_t Foundation_Integer8 SWIFT_NAME(Integer8);
+typedef char Foundation_Integer8 SWIFT_NAME(Integer8);
 
 /**
  * An 8-bit unsigned integer value type.
