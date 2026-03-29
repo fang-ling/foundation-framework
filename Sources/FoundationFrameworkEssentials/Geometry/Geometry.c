@@ -1,8 +1,8 @@
 //
-//  FoundationFramework.h
+//  Geometry.c
 //  foundation-framework
 //
-//  Created by Fang Ling on 2025/12/7.
+//  Created by Fang Ling on 2026/3/29.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -17,24 +17,4 @@
 //  limitations under the License.
 //
 
-#ifndef FoundationFramework_h
-#define FoundationFramework_h
-
-#include "../../Data/Data.h"
-
-#include "../../Geometry/Geometry.h"
-
-#include "../../Identifiers/UUID.h"
-
-#include "../../Miscellanies/Base.h"
-#include "../../Miscellanies/ObjectBase.h"
-
-#include "../../Numerics/BinaryLogic.h"
-#include "../../Numerics/FloatingPoint64.h"
-#include "../../Numerics/Integer8.h"
-#include "../../Numerics/Integer32.h"
-#include "../../Numerics/Integer64.h"
-
-#include "../../Strings/String.h"
-
-#endif /* FoundationFramework_h */
+#include "Geometry.h"

@@ -1,8 +1,8 @@
 //
-//  FoundationFramework.h
+//  Geometry.swift
 //  foundation-framework
 //
-//  Created by Fang Ling on 2025/12/7.
+//  Created by Fang Ling on 2026/3/29.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -17,24 +17,26 @@
 //  limitations under the License.
 //
 
-#ifndef FoundationFramework_h
-#define FoundationFramework_h
+import FoundationFrameworkEssentials
 
-#include "../../Data/Data.h"
+extension Rectangle {
+  public init(
+    x: FloatingPoint64,
+    y: FloatingPoint64,
+    width: FloatingPoint64,
+    height: FloatingPoint64
+  ) {
+    self.init(
+      origin: .init(x: x, y: y),
+      size: .init(width: width, height: height)
+    )
+  }
+}
 
-#include "../../Geometry/Geometry.h"
+extension Rectangle {
+  public static let zero = Rectangle(x: 0, y: 0, width: 0, height: 0)
+}
 
-#include "../../Identifiers/UUID.h"
-
-#include "../../Miscellanies/Base.h"
-#include "../../Miscellanies/ObjectBase.h"
-
-#include "../../Numerics/BinaryLogic.h"
-#include "../../Numerics/FloatingPoint64.h"
-#include "../../Numerics/Integer8.h"
-#include "../../Numerics/Integer32.h"
-#include "../../Numerics/Integer64.h"
-
-#include "../../Strings/String.h"
-
-#endif /* FoundationFramework_h */
+extension Point {
+  public static let zero = Point(x: 0, y: 0)
+}

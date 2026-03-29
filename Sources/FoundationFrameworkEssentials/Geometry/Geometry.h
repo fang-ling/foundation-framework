@@ -1,8 +1,8 @@
 //
-//  FoundationFramework.h
+//  Geometry.h
 //  foundation-framework
 //
-//  Created by Fang Ling on 2025/12/7.
+//  Created by Fang Ling on 2026/3/29.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -17,24 +17,27 @@
 //  limitations under the License.
 //
 
-#ifndef FoundationFramework_h
-#define FoundationFramework_h
+#ifndef Geometry_h
+#define Geometry_h
 
-#include "../../Data/Data.h"
+#include "../Numerics/FloatingPoint64.h"
 
-#include "../../Geometry/Geometry.h"
+struct Foundation_Point {
+  Foundation_FloatingPoint64 x;
+  Foundation_FloatingPoint64 y;
+}
+SWIFT_NAME(Point);
 
-#include "../../Identifiers/UUID.h"
+struct Foundation_Size {
+  Foundation_FloatingPoint64 width;
+  Foundation_FloatingPoint64 height;
+}
+SWIFT_NAME(Size);
 
-#include "../../Miscellanies/Base.h"
-#include "../../Miscellanies/ObjectBase.h"
+struct Foundation_Rectangle {
+  struct Foundation_Point origin;
+  struct Foundation_Size size;
+}
+SWIFT_NAME(Rectangle);
 
-#include "../../Numerics/BinaryLogic.h"
-#include "../../Numerics/FloatingPoint64.h"
-#include "../../Numerics/Integer8.h"
-#include "../../Numerics/Integer32.h"
-#include "../../Numerics/Integer64.h"
-
-#include "../../Strings/String.h"
-
-#endif /* FoundationFramework_h */
+#endif /* Geometry_h */
