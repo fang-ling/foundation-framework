@@ -39,6 +39,6 @@ struct UUIDTests {
 
     let uuidString = uuid.uuidString
     #expect(uuidString.charactersView[14] == 52)
-    #expect([56, 57, 97, 98].contains(uuidString.charactersView[19]))
+    #expect([56, 57, 65, 66].contains(uuidString.charactersView[19]))
   }
 }

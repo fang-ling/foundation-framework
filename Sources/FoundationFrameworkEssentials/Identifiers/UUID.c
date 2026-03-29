@@ -63,7 +63,10 @@ Foundation_UUID Foundation_UUID_Initialize(void) {
   uuid->_objectBase.retainCount = 1;
 
 #if defined(__wasm__)
-  __wasi_random_get(uuid->_uuid, sizeof(Foundation_UnsignedInteger64) * 2);
+  (void)__wasi_random_get(
+    (void*)uuid->_uuid,
+    sizeof(Foundation_UnsignedInteger64) * 2
+  );
 #else
   uuid->_uuid[0] = (Foundation_UnsignedInteger64)arc4random() << 32;
   uuid->_uuid[0] |= arc4random();
@@ -98,7 +101,7 @@ Foundation_String Foundation_UUID_GetUUIDString(Foundation_UUID uuid) {
   Foundation_Integer8 buffer[37];
   snprintf(buffer,
            37,
-           "%08x-%04x-%04x-%04x-%012llx",
+           "%08X-%04X-%04X-%04X-%012llX",
            (Foundation_UnsignedInteger32)(uuid->_uuid[1] >> 32),
            (Foundation_UnsignedInteger32)((uuid->_uuid[1] >> 16) & 0xFFFF),
            (Foundation_UnsignedInteger32)(uuid->_uuid[1] & 0xFFFF),
