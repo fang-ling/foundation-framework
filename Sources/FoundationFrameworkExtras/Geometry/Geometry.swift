@@ -40,3 +40,21 @@ extension Rectangle {
 extension Point {
   public static let zero = Point(x: 0, y: 0)
 }
+
+extension Point: Equatable {
+  public static func == (lhs: Point, rhs: Point) -> BinaryLogic {
+    lhs.x == rhs.x && lhs.y == rhs.y
+  }
+}
+
+extension Size: Equatable {
+  public static func == (lhs: Size, rhs: Size) -> BinaryLogic {
+    lhs.width == rhs.width && lhs.height == rhs.height
+  }
+}
+
+extension Rectangle: Equatable {
+  public static func == (lhs: Rectangle, rhs: Rectangle) -> BinaryLogic {
+    lhs.origin == rhs.origin && lhs.size == rhs.size
+  }
+}
