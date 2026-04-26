@@ -51,4 +51,18 @@ C_ASSUME_NONNULL_BEGIN
 
 @end
 
+/*
+ * Exposed to CoreFoundation to ensure correct initialization of the Objective-C
+ * instance.
+ */
+CoreFoundationAnyObject*
+FoundationCoreFoundationNumberInitializeWithUnsignedInteger(
+  CUnsignedInteger64 value
+) {
+  let number =
+    [[FoundationCoreFoundationNumber alloc] initWithUnsignedInteger:value];
+
+  return (retained_bridging CoreFoundationAnyObject*)number;
+}
+
 C_ASSUME_NONNULL_END

@@ -17,9 +17,9 @@
 //  limitations under the License.
 //
 
-@testable import FoundationKit
-
 import Testing
+
+import FoundationKit
 
 @Test("FoundationArrayTests")
 func testFoundationArray() {

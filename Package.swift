@@ -53,7 +53,10 @@ let package = Package(
     ),
     .testTarget(
       name: "FoundationKitTests",
-      dependencies: ["FoundationKit"]
+      dependencies: [
+        "FoundationKit",
+        .product(name: "CoreFoundationKit", package: "core-foundation-kit")
+      ]
     )
   ]
 )

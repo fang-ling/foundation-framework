@@ -17,12 +17,29 @@
 //  limitations under the License.
 //
 
-@testable import FoundationKit
-
 import Testing
+
+import CoreFoundationKit
+import FoundationKit
 
 @Test("FoundationNumberTests")
 func testFoundationNumber() {
-  let number = FoundationNumber.make(withUnsignedInteger: 19358)
+  var number = FoundationNumber.make(withUnsignedInteger: 19358)
   #expect(number.unsignedIntegerValue == 19358)
+
+  // Test bridging.
+  number = Unmanaged<FoundationNumber>
+    .fromOpaque(
+      UnsafeRawPointer(CoreFoundationNumberInitializeWithUnsignedInteger(19342))
+    )
+    .takeRetainedValue()
+  #expect(number.unsignedIntegerValue == 19342)
+
+  number = Unmanaged<FoundationNumber>
+    .fromOpaque(
+      UnsafeRawPointer(CoreFoundationNumberInitializeWithUnsignedInteger(12333))
+    )
+    .takeUnretainedValue()
+  #expect(number.unsignedIntegerValue == 12333)
+  CoreFoundationRelease(Unmanaged.passUnretained(number).toOpaque())
 }
