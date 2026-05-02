@@ -18,7 +18,6 @@
  */
 
 #import <CKit/CKit.h>
-#import <ObjectiveCKit/ObjectiveCKit.h>
 
 #import "FoundationString.h"
 

@@ -62,7 +62,7 @@ FoundationCoreFoundationNumberInitializeWithUnsignedInteger(
   let number =
     [[FoundationCoreFoundationNumber alloc] initWithUnsignedInteger:value];
 
-  return (retained_bridging CoreFoundationAnyObject*)number;
+  return (retainedbridging CoreFoundationAnyObject*)number;
 }
 
 C_ASSUME_NONNULL_END

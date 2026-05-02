@@ -46,54 +46,16 @@ C_ASSUME_NONNULL_BEGIN
  *
  * - ``objectAtIndex:``
  */
-//@interface FoundationArray<Element>: ObjectiveCObject {
-//  @protected owning ObjectiveCAnyObject* _objects;
-//}
+@interface FoundationArray<Element>: ObjectiveCObject
 
 /**
  * The number of elements in the array.
  */
-//@property (nonatomic, assign, readonly) CUnsignedInteger64 count;
+@property (nonatomic, readonly) CUnsignedInteger64 count;
 
-/**
- * The total number of elements that the array can contain without allocating
- * new storage.
- */
-//@property (nonatomic, assign, readonly) CUnsignedInteger64 capacity;
++ (instancetype)makeArray;
 
-/**
- * Initializes a newly allocated array.
- *
- * After an immutable array has been initialized in this way, it cannot be
- * modified.
- *
- * This method is a designated initializer.
- *
- * - Returns: An array.
- */
-//- (instancetype)init
-//  OBJECTIVE_C_DESIGNATED_INITIALIZER;
-
-/**
- * Initializes a newly allocated array by placing in it the objects in the
- * argument list.
- *
- * Pass comma-separated list of trailing variadic arguments as additional
- * objects, ending with `nil`.
- *
- * After an immutable array has been initialized in this way, it can't be
- * modified.
- *
- * This method is a designated initializer.
- *
- * - Parameter firstObject: The first object for the array.
- *
- * - Returns: An array initialized to include the objects in the argument list.
- *   The returned object might be different than the original receiver.
- */
-//- (instancetype)initWithObjects:(Element)firstObject, ...
-//  OBJECTIVE_C_REQUIRES_NIL_TERMINATION
-//  OBJECTIVE_C_DESIGNATED_INITIALIZER;
+- (CUnsignedInteger64)count;
 
 /**
  * Returns the object located at the specified index.
@@ -105,8 +67,8 @@ C_ASSUME_NONNULL_BEGIN
  *
  * - Returns: The object located at index.
  */
-//- (Element)objectAtIndex:(CUnsignedInteger64)index;
+- (Element)objectAtIndex:(CUnsignedInteger64)index;
 
-//@end
+@end
 
 C_ASSUME_NONNULL_END

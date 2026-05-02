@@ -1,8 +1,8 @@
 /*
- *  FoundationArray+Private.h
+ *  FoundationCoreFoundationMutableArray.h
  *  foundation-kit
  *
- *  Created by Fang Ling on 2026/4/19.
+ *  Created by Fang Ling on 2026/5/2.
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -17,10 +17,23 @@
  *  limitations under the License.
  */
 
-//@interface FoundationArray ()
-//
-//@property (nonatomic, assign, readwrite) CUnsignedInteger64 count;
-//
-//@property (nonatomic, assign, readwrite) CUnsignedInteger64 capacity;
-//
-//@end
+#import <CKit/CKit.h>
+
+#import "FoundationMutableArray.h"
+
+C_ASSUME_NONNULL_BEGIN
+
+@interface FoundationCoreFoundationMutableArray<Element>:
+  FoundationMutableArray<Element>
+
+- (instancetype)init;
+
+- (Element)objectAtIndex:(CUnsignedInteger64)index;
+
+- (void)appendObject:(Element)object;
+
+- (void)removeLastObject;
+
+@end
+
+C_ASSUME_NONNULL_END

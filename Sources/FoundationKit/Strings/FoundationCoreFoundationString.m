@@ -57,6 +57,10 @@ C_ASSUME_NONNULL_BEGIN
   return self;
 }
 
+- (void)dealloc {
+  CMemoryDeallocate(self->_characters);
+}
+
 - (CUnsignedInteger64)count {
   return CoreFoundationStringGetCount((bridging CoreFoundationString*)self);
 }
@@ -78,7 +82,7 @@ CoreFoundationAnyObject*
 FoundationCoreFoundationStringInitializeWithCString(CString cString) {
   let string = [[FoundationCoreFoundationString alloc] initWithCString:cString];
 
-  return (retained_bridging CoreFoundationAnyObject*)string;
+  return (retainedbridging CoreFoundationAnyObject*)string;
 }
 
 C_ASSUME_NONNULL_END

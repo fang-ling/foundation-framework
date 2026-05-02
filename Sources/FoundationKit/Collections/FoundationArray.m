@@ -19,75 +19,26 @@
 
 #import "FoundationArray.h"
 
-//#import <stdarg.h>
-
-//#import "FoundationArray+Private.h"
+#import "FoundationCoreFoundationArray.h"
 
 C_ASSUME_NONNULL_BEGIN
 
-//@implementation FoundationArray
+@implementation FoundationArray
 
-//- (instancetype)init {
-//  if (!(self = [super init])) {
-//    return nil;
-//  }
-//
-//  self.count = 0;
-//  self.capacity = 0;
-//  self->_objects = (owning ObjectiveCAnyObject*)malloc(0);
-//
-//  return self;
-//}
++ (instancetype)makeArray {
+  return [[FoundationCoreFoundationArray alloc] init];
+}
 
-//- (instancetype)initWithObjects:(ObjectiveCAnyObject)firstObject, ... {
-//  if (!(self = [super init])) {
-//    return nil;
-//  }
-//
-//  let count = 0ull;
-//  if (firstObject) {
-//    count = 1;
-//
-//    va_list arguments;
-//    va_start(arguments, firstObject);
-//    while (va_arg(arguments, ObjectiveCAnyObject) != nil) {
-//      count += 1;
-//    }
-//    va_end(arguments);
-//  }
-//
-//  self.count = count;
-//  self.capacity = count;
-//  self->_objects = (owning ObjectiveCAnyObject*)malloc(
-//    sizeof(ObjectiveCAnyObject) * count
-//  );
-//
-//  if (count > 0) {
-//    self->_objects[0] = firstObject;
-//
-//    va_list arguments;
-//    va_start(arguments, firstObject);
-//    for (let i = 1; i < count; i += 1) {
-//      self->_objects[i] = va_arg(arguments, ObjectiveCAnyObject);
-//    }
-//    va_end(arguments);
-//  }
-//
-//  return self;
-//}
+- (CUnsignedInteger64)count {
+  CDebuggingHaltWithMessage("*** ABSTRACT METHOD count IS BEING CALLED. ***");
+}
 
-//- (void)dealloc {
-//  for (let i = 0; i < self.count; i += 1) {
-//    self->_objects[i] = nil;
-//  }
-//
-//  free(self->_objects);
-//}
+- (ObjectiveCAnyObject)objectAtIndex:(CUnsignedInteger64)index {
+  CDebuggingHaltWithMessage(
+    "*** ABSTRACT METHOD objectAtIndex: IS BEING CALLED. ***"
+  );
+}
 
-//- (ObjectiveCAnyObject)objectAtIndex:(CUnsignedInteger64)index {
-//  return self->_objects[index];
-//}
-
-//@end
+@end
 
 C_ASSUME_NONNULL_END
