@@ -19,6 +19,8 @@
 #ifndef FOUNDATION_FRAMEWORK_H
 #define FOUNDATION_FRAMEWORK_H
 
+#import <FoundationFramework/LowLevelUtilities/ProcessesAndThreads/FoundationThread.h>
+
 #import <FoundationFramework/FoundationAvailability.h>
 
 #endif
