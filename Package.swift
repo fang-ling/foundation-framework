@@ -3,11 +3,11 @@
 //===----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------===//
 //
 //  Package.swift
-//  foundation-kit
+//  foundation-framework
 //
 //  Created by Fang Ling on 2025/12/7.
 //
-//  This source file is part of the FoundationKit open source project
+//  This source file is part of the FoundationFramework open source project
 //
 //  Copyright (c) 2025-2026 Fang Ling <fangling@fangl.ing>
 //  Licensed under Apache License v2.0
@@ -20,30 +20,26 @@
 
 import PackageDescription
 
-let isDevelopment = false
-
-let dependencies = [
-  ("c-kit", "CKit", "main"),
-  ("core-foundation-kit", "CoreFoundationKit", "main"),
-  ("swift-framework", "SwiftFramework", "main"),
-  ("swift-yyjson", "CYYJSON", "main")
-]
-
 let package = Package(
-  name: "foundation-kit",
+  name: "foundation-framework",
   products: [
-    .library(name: "FoundationKit", targets: ["FoundationKit"])
+    .library(name: "FoundationFramework", targets: ["FoundationFramework"])
   ],
-  dependencies: dependencies.map { isDevelopment ? .package(path: "../\($0.0)") : .package(url: "https://github.com/fang-ling/\($0.0)", branch: $0.2) },
+  dependencies: [
+    .package(path: "../c-framework")
+  ],
   targets: [
     .target(
-      name: "FoundationKit",
-      dependencies: dependencies.map { .product(name: $0.1, package: $0.0) }
+      name: "FoundationFramework",
+      dependencies: [
+        .product(name: "CFramework", package: "c-framework")
+      ],
+      publicHeadersPath: "Includes"
     ),
     .testTarget(
-      name: "FoundationKitTests",
+      name: "FoundationFrameworkTests",
       dependencies: [
-        "FoundationKit"
+        "FoundationFramework"
       ]
     )
   ]
