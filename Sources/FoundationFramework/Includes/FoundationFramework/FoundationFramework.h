@@ -19,6 +19,7 @@
 #ifndef FOUNDATION_FRAMEWORK_H
 #define FOUNDATION_FRAMEWORK_H
 
+#import <FoundationFramework/Fundamentals/DatesAndTimes/DateRepresentations/FoundationTimeInterval.h>
 #import <FoundationFramework/Fundamentals/StringsAndText/Strings/FoundationString.h>
 
 #import <FoundationFramework/LowLevelUtilities/ProcessesAndThreads/FoundationThread.h>
