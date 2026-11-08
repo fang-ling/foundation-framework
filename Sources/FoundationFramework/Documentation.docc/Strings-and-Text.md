@@ -6,4 +6,4 @@ Create and process strings of Unicode characters, use regular expressions to fin
 
 ### Strings
 
-- ``FoundationKit/FoundationString``
+- ``FoundationFramework/FoundationString``

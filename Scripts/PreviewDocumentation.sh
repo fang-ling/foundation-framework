@@ -18,16 +18,38 @@
 ##
 ##===----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------===##
 
-SYMBOLS_FOLDER="/dev/shm/symbol-graphs"
-OUTPUT_FOLDER="/dev/shm/docc"
+set -eou pipefail
 
-swift build --target FoundationKit -Xswiftc -emit-symbol-graph -Xswiftc -emit-symbol-graph-dir -Xswiftc $SYMBOLS_FOLDER
+FOLDER_PREFIX=$([[ "$(uname -s)" == "Darwin" ]] && echo "/tmp" || echo "/dev/shm")
+SYMBOLS_FOLDER=$FOLDER_PREFIX"/symbol-graphs"
+OUTPUT_FOLDER=$FOLDER_PREFIX"/docc"
+DOCC=$([[ "$(uname -s)" == "Darwin" ]] && echo "xcrun docc" || echo "docc")
 
-docc convert Sources/FoundationKit/Documentation.docc -o $OUTPUT_FOLDER --additional-symbol-graph-dir $SYMBOLS_FOLDER
+FRAMEWORK_NAME="FoundationFramework"
+HEADERS=(
+  Sources/$FRAMEWORK_NAME/Includes/$FRAMEWORK_NAME/Fundamentals/DatesAndTimes/DateRepresentations/FoundationTimeInterval.h
+  Sources/$FRAMEWORK_NAME/Includes/$FRAMEWORK_NAME/Fundamentals/StringsAndText/Strings/FoundationString.h
+)
 
-echo "========================================"
-echo "Starting Local Preview Server"
-echo "    Address: http://"$(ip route get 1.1.1.1 | grep -oP '(?<=src\s)\d+(\.\d+){3}')"/documentation/foundationkit"
-echo "========================================"
+clang                                               \
+    -extract-api                                    \
+    --product-name=$FRAMEWORK_NAME                  \
+    -o $SYMBOLS_FOLDER/$FRAMEWORK_NAME.symbols.json \
+    -x objective-c-header                           \
+    "${HEADERS[@]}"                                 \
+    -ISources/$FRAMEWORK_NAME/Includes              \
+    -I../c-framework/Sources/CFramework/Includes    \
+    -I.
 
-python3 -m http.server 80 --directory $OUTPUT_FOLDER
+if [[ "$(uname -s)" == "Darwin" ]]; then
+  $DOCC preview Sources/$FRAMEWORK_NAME/Documentation.docc -o $OUTPUT_FOLDER --additional-symbol-graph-dir $SYMBOLS_FOLDER
+else
+  $DOCC convert Sources/$FRAMEWORK_NAME/Documentation.docc -o $OUTPUT_FOLDER --additional-symbol-graph-dir $SYMBOLS_FOLDER
+
+  echo "========================================"
+  echo "Starting Local Preview Server"
+  echo "    Address: http://"$(ip route get 1.1.1.1 | grep -oP '(?<=src\s)\d+(\.\d+){3}')"/documentation/foundationframework"
+  echo "========================================"
+
+  python3 -m http.server 80 --directory $OUTPUT_FOLDER
+fi
