@@ -27,6 +27,7 @@ DOCC=$([[ "$(uname -s)" == "Darwin" ]] && echo "xcrun docc" || echo "docc")
 
 FRAMEWORK_NAME="FoundationFramework"
 HEADERS=(
+  Sources/$FRAMEWORK_NAME/Includes/$FRAMEWORK_NAME/Fundamentals/DatesAndTimes/DateRepresentations/FoundationTimeInterval.h
   Sources/$FRAMEWORK_NAME/Includes/$FRAMEWORK_NAME/Fundamentals/StringsAndText/Strings/FoundationString.h
 )
 
