@@ -34,7 +34,7 @@
  *
  * - ``FoundationURLSessionDataTask``
  */
-typedef NSURLSession FoundationURLSession;
+@compatibility_alias FoundationURLSession NSURLSession;
 
 #endif
 
