@@ -7,3 +7,4 @@ Use arrays, dictionaries, sets, and specialized collections to store and iterate
 ### Basic Collections
 
 - ``FoundationFramework/FoundationArray``
+- ``FoundationFramework/FoundationDictionary``
