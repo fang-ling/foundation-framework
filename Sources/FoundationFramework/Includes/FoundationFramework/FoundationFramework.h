@@ -20,6 +20,7 @@
 #define FOUNDATION_FRAMEWORK_H
 
 #import <FoundationFramework/Fundamentals/Collections/BasicCollections/FoundationArray.h>
+#import <FoundationFramework/Fundamentals/Collections/BasicCollections/FoundationDictionary.h>
 #import <FoundationFramework/Fundamentals/DatesAndTimes/DateRepresentations/FoundationTimeInterval.h>
 #import <FoundationFramework/Fundamentals/StringsAndText/Strings/FoundationString.h>
 
