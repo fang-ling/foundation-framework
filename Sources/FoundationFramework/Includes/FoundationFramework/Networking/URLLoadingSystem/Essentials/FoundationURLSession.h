@@ -27,6 +27,12 @@
 
 /**
  * An object that coordinates a group of related, network data transfer tasks.
+ *
+ * ## Topics
+ *
+ * ### Adding data tasks to a session
+ *
+ * - ``FoundationURLSessionDataTask``
  */
 typedef NSURLSession FoundationURLSession;
 
