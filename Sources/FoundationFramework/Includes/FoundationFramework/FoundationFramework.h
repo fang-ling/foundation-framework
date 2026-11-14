@@ -27,6 +27,7 @@
 #import <FoundationFramework/Fundamentals/StringsAndText/Strings/FoundationString.h>
 
 #import <FoundationFramework/LowLevelUtilities/ProcessesAndThreads/FoundationThread.h>
+#import <FoundationFramework/Networking/URLLoadingSystem/Essentials/FoundationURLSession.h>
 
 #import <FoundationFramework/FoundationAvailability.h>
 
