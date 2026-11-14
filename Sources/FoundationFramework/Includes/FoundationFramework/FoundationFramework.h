@@ -19,6 +19,8 @@
 #ifndef FOUNDATION_FRAMEWORK_H
 #define FOUNDATION_FRAMEWORK_H
 
+#import <FoundationFramework/AppSupport/ErrorsAndExceptions/UserRelevantErrors/FoundationError.h>
+
 #import <FoundationFramework/Fundamentals/Collections/BasicCollections/FoundationArray.h>
 #import <FoundationFramework/Fundamentals/Collections/BasicCollections/FoundationDictionary.h>
 #import <FoundationFramework/Fundamentals/DatesAndTimes/DateRepresentations/FoundationTimeInterval.h>
