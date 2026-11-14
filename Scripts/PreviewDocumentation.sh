@@ -32,6 +32,7 @@ HEADERS=(
   Sources/$FRAMEWORK_NAME/Includes/$FRAMEWORK_NAME/Fundamentals/Collections/BasicCollections/FoundationDictionary.h
   Sources/$FRAMEWORK_NAME/Includes/$FRAMEWORK_NAME/Fundamentals/DatesAndTimes/DateRepresentations/FoundationTimeInterval.h
   Sources/$FRAMEWORK_NAME/Includes/$FRAMEWORK_NAME/Fundamentals/StringsAndText/Strings/FoundationString.h
+  Sources/$FRAMEWORK_NAME/Includes/$FRAMEWORK_NAME/Networking/URLLoadingSystem/Essentials/FoundationURLSession.h
 )
 
 clang                                               \
