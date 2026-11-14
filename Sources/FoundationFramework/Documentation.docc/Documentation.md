@@ -14,3 +14,7 @@ and networking. The classes, protocols, and data types defined by ``FoundationFr
 - <doc:Strings-and-Text>
 - <doc:Collections>
 - <doc:Dates-and-Times>
+
+### App Support
+
+- <doc:Errors-and-Exceptions>
