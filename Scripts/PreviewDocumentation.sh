@@ -27,8 +27,13 @@ DOCC=$([[ "$(uname -s)" == "Darwin" ]] && echo "xcrun docc" || echo "docc")
 
 FRAMEWORK_NAME="FoundationFramework"
 HEADERS=(
+  Sources/$FRAMEWORK_NAME/Includes/$FRAMEWORK_NAME/AppSupport/ErrorsAndExceptions/UserRelevantErrors/FoundationError.h
+  Sources/$FRAMEWORK_NAME/Includes/$FRAMEWORK_NAME/Fundamentals/Collections/BasicCollections/FoundationArray.h
+  Sources/$FRAMEWORK_NAME/Includes/$FRAMEWORK_NAME/Fundamentals/Collections/BasicCollections/FoundationDictionary.h
   Sources/$FRAMEWORK_NAME/Includes/$FRAMEWORK_NAME/Fundamentals/DatesAndTimes/DateRepresentations/FoundationTimeInterval.h
   Sources/$FRAMEWORK_NAME/Includes/$FRAMEWORK_NAME/Fundamentals/StringsAndText/Strings/FoundationString.h
+  Sources/$FRAMEWORK_NAME/Includes/$FRAMEWORK_NAME/Networking/URLLoadingSystem/Essentials/FoundationURLSession.h
+  Sources/$FRAMEWORK_NAME/Includes/$FRAMEWORK_NAME/Networking/URLLoadingSystem/Essentials/FoundationURLSessionDataTask.h
 )
 
 clang                                               \

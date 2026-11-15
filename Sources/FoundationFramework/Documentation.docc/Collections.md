@@ -1,4 +1,4 @@
-#  Collections
+# Collections
 
 Use arrays, dictionaries, sets, and specialized collections to store and iterate groups of objects or values.
 
@@ -6,8 +6,5 @@ Use arrays, dictionaries, sets, and specialized collections to store and iterate
 
 ### Basic Collections
 
-- ``FoundationKit/FoundationArray``
-
-### Indexes
-
-- ``FoundationKit/FoundationIndexPath``
+- ``FoundationFramework/FoundationArray``
+- ``FoundationFramework/FoundationDictionary``
