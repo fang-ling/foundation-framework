@@ -34,6 +34,7 @@
 #import <FoundationFramework/Networking/URLLoadingSystem/Essentials/FoundationURLSession.h>
 #import <FoundationFramework/Networking/URLLoadingSystem/Essentials/FoundationURLSessionDataTask.h>
 #import <FoundationFramework/Networking/URLLoadingSystem/RequestsAndResponses/FoundationURLRequest.h>
+#import <FoundationFramework/Networking/URLLoadingSystem/RequestsAndResponses/FoundationURLResponse.h>
 
 #import <FoundationFramework/FoundationAvailability.h>
 
