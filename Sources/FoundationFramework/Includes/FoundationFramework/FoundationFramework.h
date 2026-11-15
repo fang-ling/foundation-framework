@@ -22,6 +22,8 @@
 #import <FoundationFramework/AppSupport/ErrorsAndExceptions/UserRelevantErrors/FoundationError.h>
 #import <FoundationFramework/AppSupport/TaskManagement/Operations/FoundationOperationQueue.h>
 
+#import <FoundationFramework/FilesAndDataPersistence/ArchivesAndSerialization/JSON/FoundationJSONSerialization.h>
+
 #import <FoundationFramework/Fundamentals/Collections/BasicCollections/FoundationArray.h>
 #import <FoundationFramework/Fundamentals/Collections/BasicCollections/FoundationDictionary.h>
 #import <FoundationFramework/Fundamentals/Collections/BasicCollections/FoundationMutableArray.h>
