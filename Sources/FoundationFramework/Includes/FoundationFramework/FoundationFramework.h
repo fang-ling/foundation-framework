@@ -20,6 +20,7 @@
 #define FOUNDATION_FRAMEWORK_H
 
 #import <FoundationFramework/AppSupport/ErrorsAndExceptions/UserRelevantErrors/FoundationError.h>
+#import <FoundationFramework/AppSupport/Resources/BundleResources/FoundationBundle.h>
 #import <FoundationFramework/AppSupport/TaskManagement/Operations/FoundationOperationQueue.h>
 
 #import <FoundationFramework/FilesAndDataPersistence/ArchivesAndSerialization/JSON/FoundationJSONSerialization.h>
