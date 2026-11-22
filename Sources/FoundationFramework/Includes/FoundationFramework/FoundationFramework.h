@@ -36,6 +36,7 @@
 #import <FoundationFramework/Fundamentals/StringsAndText/Localization/FoundationLocalizedStringFromTableInBundle.h>
 #import <FoundationFramework/Fundamentals/StringsAndText/Strings/FoundationString.h>
 #import <FoundationFramework/Fundamentals/StringsAndText/StringsWithMetadata/FoundationAttributedString.h>
+#import <FoundationFramework/Fundamentals/StringsAndText/StringsWithMetadata/FoundationMutableAttributedString.h>
 
 #import <FoundationFramework/LowLevelUtilities/ProcessesAndThreads/FoundationThread.h>
 #import <FoundationFramework/Networking/URLLoadingSystem/Essentials/FoundationURLSession.h>
