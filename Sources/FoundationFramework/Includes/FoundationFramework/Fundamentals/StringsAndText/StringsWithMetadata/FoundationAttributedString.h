@@ -25,6 +25,8 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NSAttributedStringKey FoundationAttributedStringKey;
+
 @compatibility_alias FoundationAttributedString NSAttributedString;
 
 #endif
