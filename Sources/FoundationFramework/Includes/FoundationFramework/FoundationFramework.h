@@ -20,6 +20,7 @@
 #define FOUNDATION_FRAMEWORK_H
 
 #import <FoundationFramework/AppSupport/ErrorsAndExceptions/UserRelevantErrors/FoundationError.h>
+#import <FoundationFramework/AppSupport/Resources/BundleResources/FoundationBundle.h>
 #import <FoundationFramework/AppSupport/TaskManagement/Operations/FoundationOperationQueue.h>
 
 #import <FoundationFramework/FilesAndDataPersistence/ArchivesAndSerialization/JSON/FoundationJSONSerialization.h>
@@ -27,12 +28,17 @@
 #import <FoundationFramework/Fundamentals/Collections/BasicCollections/FoundationArray.h>
 #import <FoundationFramework/Fundamentals/Collections/BasicCollections/FoundationDictionary.h>
 #import <FoundationFramework/Fundamentals/Collections/BasicCollections/FoundationMutableArray.h>
+#import <FoundationFramework/Fundamentals/Collections/BasicCollections/FoundationMutableDictionary.h>
 #import <FoundationFramework/Fundamentals/DatesAndTimes/DateRepresentations/FoundationTimeInterval.h>
 #import <FoundationFramework/Fundamentals/NumbersDataAndBasicValues/BinaryData/FoundationData.h>
+#import <FoundationFramework/Fundamentals/NumbersDataAndBasicValues/Ranges/FoundationRange.h>
 #import <FoundationFramework/Fundamentals/NumbersDataAndBasicValues/URLs/FoundationURLComponents.h>
 #import <FoundationFramework/Fundamentals/NumbersDataAndBasicValues/URLs/FoundationURLQueryItem.h>
+#import <FoundationFramework/Fundamentals/StringsAndText/Characters/FoundationCharacterSet.h>
 #import <FoundationFramework/Fundamentals/StringsAndText/Localization/FoundationLocalizedStringFromTableInBundle.h>
 #import <FoundationFramework/Fundamentals/StringsAndText/Strings/FoundationString.h>
+#import <FoundationFramework/Fundamentals/StringsAndText/StringsWithMetadata/FoundationAttributedString.h>
+#import <FoundationFramework/Fundamentals/StringsAndText/StringsWithMetadata/FoundationMutableAttributedString.h>
 
 #import <FoundationFramework/LowLevelUtilities/ProcessesAndThreads/FoundationThread.h>
 #import <FoundationFramework/Networking/URLLoadingSystem/Essentials/FoundationURLSession.h>
