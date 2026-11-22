@@ -34,6 +34,7 @@
 #import <FoundationFramework/Fundamentals/NumbersDataAndBasicValues/Ranges/FoundationRange.h>
 #import <FoundationFramework/Fundamentals/NumbersDataAndBasicValues/URLs/FoundationURLComponents.h>
 #import <FoundationFramework/Fundamentals/NumbersDataAndBasicValues/URLs/FoundationURLQueryItem.h>
+#import <FoundationFramework/Fundamentals/StringsAndText/Characters/FoundationCharacterSet.h>
 #import <FoundationFramework/Fundamentals/StringsAndText/Localization/FoundationLocalizedStringFromTableInBundle.h>
 #import <FoundationFramework/Fundamentals/StringsAndText/Strings/FoundationString.h>
 #import <FoundationFramework/Fundamentals/StringsAndText/StringsWithMetadata/FoundationAttributedString.h>
