@@ -22,6 +22,7 @@
 #import <FoundationFramework/AppSupport/ErrorsAndExceptions/UserRelevantErrors/FoundationError.h>
 #import <FoundationFramework/AppSupport/Resources/BundleResources/FoundationBundle.h>
 #import <FoundationFramework/AppSupport/TaskManagement/Operations/FoundationOperationQueue.h>
+#import <FoundationFramework/AppSupport/TaskManagement/Scheduling/FoundationTimer.h>
 
 #import <FoundationFramework/FilesAndDataPersistence/ArchivesAndSerialization/JSON/FoundationJSONSerialization.h>
 
